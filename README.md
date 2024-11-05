@@ -8,3 +8,4 @@ I hope you like what you see in the deployed and in the code.
 
 Link to the website:
 
+[Personal Website](https://donikgoxha.github.io/Personal-Website/)
