@@ -9,25 +9,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: white;
+            background-color: #f0f0f0; /* Light gray background */
+            color: black; /* Black text */
             text-align: center;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 90%;
+            width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
         header {
-            background-color: #1e1e1e;
             padding: 20px;
-            border-radius: 5px;
         }
 
         h1, h2, h4 {
-            color: #4CAF50;
+            color: black;
         }
 
         .social-links {
@@ -39,15 +38,23 @@
 
         .social-button {
             display: inline-block;
-            padding: 10px 15px;
-            background-color: #4CAF50;
+            padding: 12px 20px;
+            background-color: #424242;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 200px;
         }
 
         .social-button:hover {
-            background-color: #45a049;
+            background-color: rgba(0, 0, 0, 0.82);
+        }
+
+        .cv {
+            text-align: left;
         }
 
         .cv-content {
@@ -55,22 +62,56 @@
             margin-top: 20px;
         }
 
+        .cv h2 {
+            text-align: left;
+        }
+
         .cv-content p, .cv-content ul, .cv-content ol {
             margin: 10px 0;
         }
 
         .divider {
-            border: 1px solid #4CAF50;
+            border: 1px solid #000000;
             margin: 20px 0;
         }
 
         a {
-            color: #4CAF50;
+            color: rgb(0, 0, 0);
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-button {
+                width: 90%;
+                max-width: 250px;
+            }
+
+            .cv-content {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -82,23 +123,32 @@
     </header>
     <main>
         <section class="about-me">
-            <h2>Who am I?</h2>
-            <p>Hello everyone, I'm Donik Goxha, a computer engineering student at FSCE with a passion for coding and technology.
-                I enjoy being faced with problems, but I mostly enjoy solving them with passion and joy.
-                I can say I am also a good team member and a supportive one. This page is a little intro to me, from here you can access all my profiles and also read a resume about me.</p>
+            <h2>About me!</h2>
+            <p>Hello everyone, I'm Donik Goxha, a 2nd Year <a href="https://www.finki.ukim.mk/program/KI23/mk"><strong>Computer
+                Engineering</strong></a> student at Faculty of Computer Science
+                and Engineering @ Ss. Cyril and Methodius University in Skopje.
+            </p>
+            <p>My passion for coding and technology drives me to tackle challenges with curiosity and determination. I
+                enjoy breaking down complex problems and crafting solutions with enthusiasm. As a supportive team
+                player, I thrive in collaborative environments, always eager to contribute and learn. With technology
+                constantly evolving, I’m excited to grow, innovate, and make an impact in the field.</p>
+            <p>This page is a little intro to me, from here you can access all my profiles and also read a resume about
+                me.</p>
         </section>
 
         <section class="social-media">
             <h2>Connect with me</h2>
             <div class="social-links">
-                <a href="https://instagram.com/donikgoxha" target="_blank" class="social-button">Instagram</a>
-                <a href="https://facebook.com/donikgoxhaa" target="_blank" class="social-button">Facebook</a>
-                <a href="https://open.spotify.com/user/hti0x3m73h66dqy3i27fifch2?si=9540aea7c51a4f6f" target="_blank" class="social-button">Spotify</a>
                 <a href="https://www.linkedin.com/in/donikgoxha/" target="_blank" class="social-button">LinkedIn</a>
                 <a href="https://github.com/donikgoxha" target="_blank" class="social-button">GitHub</a>
+                <a href="https://instagram.com/donikgoxha" target="_blank" class="social-button">Instagram</a>
+                <a href="https://facebook.com/donikgoxhaa" target="_blank" class="social-button">Facebook</a>
+                <a href="https://open.spotify.com/user/hti0x3m73h66dqy3i27fifch2?si=9540aea7c51a4f6f" target="_blank"
+                   class="social-button">Spotify</a>
             </div>
         </section>
 
+        <hr class="divider">
         <section class="cv">
             <h2>My CV</h2>
             <div class="cv-content">
@@ -107,12 +157,13 @@
                 <p><strong>• Email:</strong> <a href="mailto:donik.goxha@gmail.com">donik.goxha@gmail.com</a></p>
 
                 <hr class="divider">
-                <h4><strong>Work Experience</strong></h4>
+                <h2><strong>Work Experience</strong></h2>
                 <p>• CEO and Sales Manager @ DGD Smart (August 2023 - Present)</p>
 
                 <hr class="divider">
-                <h4>Education</h4>
-                <p><strong>• University "SS. Cyril and Methodius" - Faculty of Computer Science and Engineering (2023 - present)</strong></p>
+                <h2>Education</h2>
+                <p><strong>• University "SS. Cyril and Methodius" - Faculty of Computer Science and Engineering (2023 -
+                    present)</strong></p>
                 <ul>
                     <li>Major: Computer Engineering</li>
                 </ul>
@@ -126,7 +177,7 @@
                 </ul>
 
                 <hr class="divider">
-                <h4>Skills</h4>
+                <h2>Skills</h2>
                 <p><strong>Languages:</strong></p>
                 <ol>
                     <li>Albanian (Mother Tongue)</li>
@@ -135,7 +186,6 @@
                     <li>German (A2)</li>
                     <li>Turkish (A2)</li>
                 </ol>
-                <p><strong>Communication:</strong> Skilled in presenting, debating, and maintaining the attention of the crowd when talking or presenting on stage.</p>
                 <p><strong>Organizational Skills:</strong></p>
                 <ul>
                     <li>Leadership</li>
@@ -147,7 +197,9 @@
                 <ul>
                     <li>Excellent with Microsoft Office tools</li>
                     <li>Excellent with Adobe Creative Cloud tools</li>
-                    <li>Excellent at switching operating systems such as Windows, macOS, and Linux (Ubuntu, Debian, Kali, etc.)</li>
+                    <li>Excellent at switching operating systems such as Windows, macOS, and Linux (Ubuntu, Debian,
+                        Kali, etc.)
+                    </li>
                     <li>Excellent knowledge of C++ and other programming languages to come...</li>
                 </ul>
                 <p><strong>Other Skills:</strong></p>
