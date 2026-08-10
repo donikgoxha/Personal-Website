@@ -7,12 +7,12 @@
           content="Donik Goxha — Computer Engineering student at FINKI (UKIM) and web developer in Gostivar, North Macedonia. Client websites, full-stack applications and CI/CD work.">
     <meta name="author" content="Donik Goxha">
     <meta name="theme-color" content="#07080a">
-    <link rel="canonical" href="https://donikgoxha.com/">
+    <link rel="canonical" href="https://donikgoxha.vercel.app/">
     <meta property="og:title" content="Donik Goxha | Portfolio">
     <meta property="og:description"
           content="Computer Engineering student at FINKI and web developer — client websites, full-stack applications and CI/CD work.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://donikgoxha.com/">
+    <meta property="og:url" content="https://donikgoxha.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Donik Goxha | Portfolio">
     <meta name="twitter:description"
@@ -1577,9 +1577,8 @@
                 <p class="section-label">Projects</p>
                 <h2 class="section-title">Things I've built</h2>
                 <p class="section-desc">
-                    Client websites running in production, a full-stack security project, and university
-                    coursework. Every one of these is on GitHub — the ones that are live have a link to
-                    the deployed site too.
+                    Client websites running in production and a full-stack security project. Every one of
+                    these is on GitHub — the ones that are live have a link to the deployed site too.
                 </p>
             </div>
 
@@ -1799,7 +1798,6 @@
                 <article class="project-card reveal featured" data-cats="fullstack security coursework">
                     <div class="project-top">
                         <span class="project-tag">Full-stack · Security</span>
-                        <span class="project-live-dot"><i></i>Live</span>
                         <span class="project-year">2025 — 2026</span>
                     </div>
 
@@ -1827,111 +1825,7 @@
                     </div>
 
                     <div class="project-links">
-                        <a class="plink live" href="https://authsysinformationsecurity.vercel.app" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            Visit site
-                        </a>
                         <a class="plink" href="https://github.com/donikgoxha/Authentication-System" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            Repository
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-cats="devops coursework">
-                    <div class="project-top">
-                        <span class="project-tag pink">DevOps</span>
-                        <span class="project-live-dot"><i></i>Live</span>
-                        <span class="project-year">2026</span>
-                    </div>
-
-                    <h3 class="project-title">CI/CD Pipeline — SI Lab 3</h3>
-                    <p class="project-summary">A GitHub Actions pipeline that lints, builds, deploys and ships a container image.</p>
-                    <p class="project-body">The page itself is deliberately trivial — the deliverable is the pipeline around it. Every push on any branch runs the lint stage; only <code>master</code> carries on to build and deploy. In parallel, the same commit is packaged into an nginx image and pushed to Docker Hub tagged with its branch name, so any branch produces something runnable.</p>
-
-                    <ul class="project-points">
-                        <li>Four jobs wired together with explicit <code>needs</code> dependencies — lint, then build and deploy, plus lint then Docker push</li>
-                        <li>HTML validated with htmlhint before any other job is allowed to start</li>
-                        <li>Branch-gated deployment via <code>if: github.ref_name == "master"</code></li>
-                        <li>Artifact uploaded in one job and downloaded in the next, then published to GitHub Pages over OIDC</li>
-                        <li><code>nginx:alpine</code> image built and pushed with credentials read from repository secrets</li>
-                    </ul>
-
-                    <div class="tech-chips">
-                        <span class="chip">GitHub Actions</span>
-                        <span class="chip">Docker</span>
-                        <span class="chip">nginx</span>
-                        <span class="chip">GitHub Pages</span>
-                        <span class="chip">htmlhint</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="plink live" href="https://donikgoxha.github.io/SI_2026_lab3_235003/" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            Visit site
-                        </a>
-                        <a class="plink" href="https://github.com/donikgoxha/SI_2026_lab3_235003" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            Repository
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-cats="coursework">
-                    <div class="project-top">
-                        <span class="project-tag pink">Testing</span>
-                        <span class="project-year">2026</span>
-                    </div>
-
-                    <h3 class="project-title">White-box Testing — SI Lab 2</h3>
-                    <p class="project-summary">Control-flow analysis and structural test design over a Java library-management system.</p>
-                    <p class="project-body">A Java model of a library — books, borrowing, genre reports — used as the subject for structural testing. For <code>searchBookByTitle</code> and <code>borrowBook</code> I drew the control-flow graphs, derived cyclomatic complexity from the predicate-node count (6 and 7 respectively), then worked out the minimum test set satisfying each coverage criterion and implemented them as JUnit 5 tests.</p>
-
-                    <ul class="project-points">
-                        <li>Control-flow graphs plus cyclomatic complexity computed as P+1</li>
-                        <li>Separate test sets for Every-Statement, Every-Branch and Multiple-Condition coverage</li>
-                        <li>JUnit 5 suite driven by Gradle</li>
-                        <li>Node-to-test coverage tables in the README showing exactly which case reaches which branch</li>
-                    </ul>
-
-                    <div class="tech-chips">
-                        <span class="chip">Java</span>
-                        <span class="chip">JUnit 5</span>
-                        <span class="chip">Gradle</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="plink" href="https://github.com/donikgoxha/SI_2026_lab2_235003" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            Repository
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-cats="coursework">
-                    <div class="project-top">
-                        <span class="project-tag pink">Version control</span>
-                        <span class="project-year">2026</span>
-                    </div>
-
-                    <h3 class="project-title">Git Workflow — SI Lab 1</h3>
-                    <p class="project-summary">Branching, merging and conflict resolution documented commit by commit.</p>
-                    <p class="project-body">The same Java library application, used to practise a realistic multi-branch workflow: feature branches for search, borrowing and genre reporting developed in parallel, then merged back into master with the conflicts resolved by hand. Every command is recorded in a log file alongside the code, and the resulting history graph is captured as proof.</p>
-
-                    <ul class="project-points">
-                        <li>Parallel feature branches merged back into master</li>
-                        <li>Merge-conflict resolution and <code>git stash</code> over in-progress work</li>
-                        <li>Complete command log kept next to the source</li>
-                        <li><code>git log --graph</code> output committed as evidence of the final history</li>
-                    </ul>
-
-                    <div class="tech-chips">
-                        <span class="chip">Git</span>
-                        <span class="chip">Java</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="plink" href="https://github.com/donikgoxha/SI_2026_Lab1_235003" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                             Repository
                         </a>
@@ -1946,7 +1840,7 @@
 
                     <h3 class="project-title">Personal Portfolio</h3>
                     <p class="project-summary">The site you are reading right now.</p>
-                    <p class="project-body">One HTML file. No framework, no build step, no dependencies beyond a webfont — the whole portfolio is a single document with its styles and behaviour inline, which means it deploys as a static file and there is nothing to break. The projects section renders from a data array near the bottom of the file, so adding a project is one object literal.</p>
+                    <p class="project-body">One HTML file. No framework, no build step, no dependencies beyond a webfont — the whole portfolio is a single document with its styles and behaviour inline, which means it deploys as a static file and there is nothing to break. Each project in the section above is a plain <code>&lt;article&gt;</code> in the markup, and the filter bar builds itself from the categories those articles declare.</p>
 
                     <ul class="project-points">
                         <li>Dark interface built on CSS custom properties with an animated mesh-gradient background</li>
@@ -2003,32 +1897,6 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-cats="coursework">
-                    <div class="project-top">
-                        <span class="project-tag muted">Fork</span>
-                        <span class="project-year">2026</span>
-                    </div>
-
-                    <h3 class="project-title">SI Lab 1 — Peer Fork</h3>
-                    <p class="project-summary">A fork of another Lab 1 repository from the same Software Engineering course.</p>
-                    <p class="project-body">Kept for reference alongside my own submission — forking someone else’s repository and working against their history is part of learning a shared Git workflow rather than a solo one.</p>
-
-                    <ul class="project-points">
-                        <li>Fork of a classmate’s Lab 1 submission</li>
-                    </ul>
-
-                    <div class="tech-chips">
-                        <span class="chip">Git</span>
-                        <span class="chip">Java</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="plink" href="https://github.com/donikgoxha/SI_2026_Lab1_203043" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            Repository
-                        </a>
-                    </div>
-                </article>
             </div>
         </section>
 
@@ -2040,8 +1908,8 @@
                 <p class="section-label">Skills</p>
                 <h2 class="section-title">What I work with</h2>
                 <p class="section-desc">
-                    Everything listed here appears in the projects above — nothing on this list is
-                    theoretical.
+                    Everything here comes out of work I have actually shipped or built — nothing on this
+                    list is theoretical.
                 </p>
             </div>
 
@@ -2185,9 +2053,8 @@
                     <p class="timeline-org">Ss. Cyril and Methodius University in Skopje — Faculty of Computer Science
                         and Engineering (FINKI)</p>
                     <p class="timeline-desc">Coursework spanning algorithms, data structures, systems programming,
-                        computer architecture, software engineering and information security. The Software Engineering
-                        and Information Security labs listed in the projects section are graded coursework from this
-                        degree.</p>
+                        computer architecture, software engineering and information security. The authentication
+                        system in the projects section is graded coursework from this degree.</p>
                     <div class="timeline-tags">
                         <span class="timeline-tag">Software Engineering</span>
                         <span class="timeline-tag">Information Security</span>
