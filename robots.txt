@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://donikgoxha.vercel.app/sitemap.xml

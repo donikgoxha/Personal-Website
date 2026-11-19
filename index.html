@@ -7,16 +7,23 @@
           content="Donik Goxha — final-year Computer Engineering student at FINKI (UKIM) in Gostivar, North Macedonia. DevOps and infrastructure, full-stack web development, embedded systems and client websites.">
     <meta name="author" content="Donik Goxha">
     <meta name="theme-color" content="#060609">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://donikgoxha.vercel.app/">
     <meta property="og:title" content="Donik Goxha | Portfolio">
     <meta property="og:description"
-          content="Final-year Computer Engineering student at FINKI — DevOps and infrastructure, full-stack web development and embedded systems.">
+          content="Final-year Computer Engineering student at FINKI. DevOps and infrastructure, full-stack web development and embedded systems.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://donikgoxha.vercel.app/">
+    <meta property="og:site_name" content="Donik Goxha">
+    <meta property="og:image" content="https://donikgoxha.vercel.app/public/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Donik Goxha, Computer Engineering student and developer in Gostivar">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://donikgoxha.vercel.app/public/og-image.png">
     <meta name="twitter:title" content="Donik Goxha | Portfolio">
     <meta name="twitter:description"
-          content="Final-year Computer Engineering student at FINKI — DevOps and infrastructure, full-stack web development and embedded systems.">
+          content="Final-year Computer Engineering student at FINKI. DevOps and infrastructure, full-stack web development and embedded systems.">
     <title>Donik Goxha | Portfolio</title>
     <link rel="icon"
           href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080a'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='bold' fill='%236c63ff' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
@@ -29,6 +36,10 @@
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Donik Goxha",
+            "givenName": "Donik",
+            "familyName": "Goxha",
+            "url": "https://donikgoxha.vercel.app/",
+            "image": "https://donikgoxha.vercel.app/public/og-image.png",
             "jobTitle": "Computer Engineering Student, DevOps & Infrastructure, Software Developer",
             "knowsLanguage": ["sq", "mk", "en"],
             "worksFor": {
@@ -46,6 +57,20 @@
                 "@type": "CollegeOrUniversity",
                 "name": "Faculty of Computer Science and Engineering (FINKI), Ss. Cyril and Methodius University in Skopje"
             },
+            "knowsAbout": [
+                "DevOps",
+                "CI/CD pipelines",
+                "Docker",
+                "Kubernetes",
+                "Infrastructure as code",
+                "Linux system administration",
+                "Computer networking",
+                "Cybersecurity",
+                "Full-stack web development",
+                "React",
+                "Node.js",
+                "Embedded systems"
+            ],
             "sameAs": [
                 "https://github.com/donikgoxha",
                 "https://www.linkedin.com/in/donikgoxha/",
@@ -68,19 +93,14 @@
             -webkit-text-size-adjust: 100%;
         }
 
-        /* ===== DESIGN TOKENS =====
-           Everything below is derived from these. Spacing is in rem so the
-           layout scales with the reader's own text-size setting rather than
-           breaking when it grows. */
+        /* ===== DESIGN TOKENS (spacing in rem so it scales with user text size) ===== */
         :root {
-            /* Type. The system face ships optical sizing and proper tracking
-               tables; Inter is the fallback for everything that is not Apple. */
+            /* Type — system face first, Inter as fallback */
             --font-text: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, 'Segoe UI', sans-serif;
             --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, 'Segoe UI', sans-serif;
             --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
-            /* Tracking is size-specific: large text reads too loose, small text
-               too tight, so each step carries its own value. */
+            /* Tracking and leading per size step */
             --fs-display: clamp(2.75rem, 1.85rem + 4.2vw, 5.25rem);
             --ls-display: -0.035em;
             --lh-display: 1.03;
@@ -98,8 +118,7 @@
             --fs-caption: 0.8125rem;
             --fs-micro: 0.6875rem;
 
-            /* Surfaces. Near-black base, surfaces built from layered white so
-               every panel sits in the same light. */
+            /* Surfaces — near-black base, panels built from layered white */
             --bg: #060609;
             --bg-raised: #0b0b10;
             --surface-1: rgba(255, 255, 255, 0.035);
@@ -109,8 +128,7 @@
             --hairline-strong: rgba(255, 255, 255, 0.16);
             --edge-light: rgba(255, 255, 255, 0.14);
 
-            /* Text. Vibrancy over translucent surfaces means higher contrast
-               and a touch more weight, never flat grey. */
+            /* Text */
             --text: #f5f5f7;
             --text-2: rgba(245, 245, 247, 0.66);
             --text-3: rgba(245, 245, 247, 0.42);
@@ -137,8 +155,7 @@
             --shadow-md: 0 8px 24px -8px rgba(0, 0, 0, 0.6);
             --shadow-lg: 0 24px 60px -20px rgba(0, 0, 0, 0.75);
 
-            /* Spring-shaped curves for the non-gesture transitions. Anything a
-               finger can touch is driven by a real spring in JavaScript. */
+            /* Curves for non-gesture transitions; gestures use the JS springs */
             --ease-out: cubic-bezier(0.32, 0.72, 0, 1);
             --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
             --dur-fast: 180ms;
@@ -173,8 +190,7 @@
             color: inherit;
         }
 
-        /* Pointer-driven press states are applied by JavaScript; the browser's
-           own tap highlight would fight them. */
+        /* JS handles press states, so suppress the native tap highlight */
         a, button {
             -webkit-tap-highlight-color: transparent;
         }
@@ -203,9 +219,7 @@
             left: 0;
         }
 
-        /* ===== AMBIENT BACKGROUND =====
-           Static, not animated: a slow full-viewport loop is exactly the kind
-           of motion that makes a page tiring to read. */
+        /* ===== AMBIENT BACKGROUND (static by design) ===== */
         .bg-mesh {
             position: fixed;
             inset: 0;
@@ -240,9 +254,7 @@
             will-change: transform;
         }
 
-        /* ===== NAVIGATION =====
-           A floating translucent layer with content running underneath it,
-           not an opaque strip that eats the top of the page. */
+        /* ===== NAVIGATION ===== */
         nav {
             position: fixed;
             top: 0;
@@ -268,8 +280,7 @@
             box-shadow: 0 1px 0 var(--hairline);
         }
 
-        /* Scroll edge effect: the chrome fades into the content instead of
-           sitting on a hard 1px rule. */
+        /* Scroll edge fade instead of a hard rule */
         nav.scrolled::after {
             content: '';
             position: absolute;
@@ -304,8 +315,7 @@
             list-style: none;
         }
 
-        /* The indicator is one element that springs between links, so the
-           highlight moves continuously instead of blinking between states. */
+        /* One element, sprung between targets by JS */
         .nav-ind,
         .filter-ind {
             position: absolute;
@@ -624,9 +634,7 @@
             background: linear-gradient(90deg, transparent, var(--hairline) 18%, var(--hairline) 82%, transparent);
         }
 
-        /* ===== REVEAL =====
-           Short travel, no overshoot: content arriving is not a gesture, so it
-           settles rather than bounces. */
+        /* ===== REVEAL ===== */
         .reveal,
         .reveal-stagger > * {
             opacity: 0;
@@ -648,9 +656,7 @@
         .reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.24s; }
         .reveal-stagger.visible > *:nth-child(n+6) { transition-delay: 0.28s; }
 
-        /* ===== SURFACE =====
-           One card recipe: layered white, a bright top edge where the light
-           catches, and a shadow sized to the surface. */
+        /* ===== SURFACE — shared card recipe ===== */
         .bento-card,
         .project-card,
         .skill-group,
@@ -1260,8 +1266,7 @@
                 -webkit-backdrop-filter: var(--blur-panel);
                 backdrop-filter: var(--blur-panel);
                 box-shadow: var(--shadow-lg), inset 0 1px 0 var(--edge-light);
-                /* Opens from the button it belongs to, and leaves the same way. */
-                transform-origin: top right;
+                    transform-origin: top right;
                 opacity: 0;
                 transform: scale(0.92) translateY(-6px);
                 pointer-events: none;
@@ -1311,10 +1316,7 @@
             }
         }
 
-        /* ===== ACCESSIBILITY PREFERENCES =====
-           Reduced motion keeps the feedback and drops the travel; reduced
-           transparency makes every material solid; more contrast gives each
-           surface a defined edge. */
+        /* ===== ACCESSIBILITY PREFERENCES ===== */
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
@@ -1418,8 +1420,8 @@
             </h1>
             <p class="hero-subtitle">
                 Final-year Computer Engineering student at FINKI, based in Gostivar. I work on
-                infrastructure and DevOps — containers, CI/CD pipelines, cloud services and Linux —
-                and build full-stack web applications, embedded systems and production sites for
+                infrastructure and DevOps: containers, CI/CD pipelines, cloud services and Linux. I
+                also build full-stack web applications, embedded systems and production sites for
                 real businesses.
             </p>
             <div class="hero-actions">
@@ -1472,8 +1474,8 @@
                 <h2 class="section-title">A snapshot of who I am</h2>
                 <p class="section-desc">
                     I split my time between a final-year Computer Engineering degree, the computer
-                    store I run, and building things people actually use — client websites, an
-                    authentication system, deployment pipelines. The degree gives me the theory; the
+                    store I run, and building things people actually use: client websites, an
+                    authentication system, deployment pipelines. The degree gives me the theory. The
                     client work forces me to finish.
                 </p>
             </div>
@@ -1516,8 +1518,8 @@
                 <h2 class="section-title">Things I've built</h2>
                 <p class="section-desc">
                     Client websites running in production, a marketplace app on iOS and Android, and a
-                    full-stack security project. Most of them are on GitHub — the ones that are live link
-                    to the deployed site too.
+                    full-stack security project. Most of them are on GitHub, and the ones that are live
+                    link to the deployed site too.
                 </p>
             </div>
 
@@ -1533,8 +1535,8 @@
                      tag colour  add teal / pink / muted to class="project-tag".
                      live badge  delete the .project-live-dot span and the .plink.live
                                  link if the project is not deployed.
-                     Everything else — points, chips, links — takes as many or as few
-                     items as you want. Delete the whole block if you do not need it.
+                     Points, chips and links take as many or as few items as you want.
+                     Delete the whole block if you do not need it.
                      ============================================================ -->
                 <!--
                 <article class="project-card reveal" data-cats="personal">
@@ -1580,14 +1582,14 @@
 
                     <h3 class="project-title">JVD Dental Clinic</h3>
                     <p class="project-summary">Marketing and online-booking site for a dental clinic with two locations in Gostivar.</p>
-                    <p class="project-body">A React single-page app built on Vite 6 and Tailwind CSS v4, with appointment booking delegated to an embedded Cal.com calendar so the site never touches patient data itself. Every clinic, practitioner and phone number lives in one data file — adding a new location or dentist needs no changes anywhere else, because each page derives its layout from the length of those lists. A validator runs in development and fails loudly if a doctor is wired to a location that does not exist, which is the one mistake that would silently hide someone from the booking page.</p>
+                    <p class="project-body">A React single-page app built on Vite 6 and Tailwind CSS v4, with appointment booking delegated to an embedded Cal.com calendar so the site never touches patient data itself. Every clinic, practitioner and phone number lives in one data file, so adding a new location or dentist needs no changes anywhere else; each page derives its layout from the length of those lists. A validator runs in development and fails loudly if a doctor is wired to a location that does not exist, which is the one mistake that would silently hide someone from the booking page.</p>
 
                     <ul class="project-points">
-                        <li>Tailwind v4 configured entirely from CSS — design tokens live in an <code>@theme</code> block, no <code>tailwind.config.js</code></li>
+                        <li>Tailwind v4 configured entirely from CSS: design tokens live in an <code>@theme</code> block, no <code>tailwind.config.js</code></li>
                         <li>React and the router split into a separate vendor chunk so app edits do not bust the cache for returning visitors</li>
                         <li>First paint of the homepage is ~87 kB gzipped; the whole four-page app is under 15 kB of that</li>
                         <li>Cal.com embed loaded on demand, only once a patient reaches the booking page</li>
-                        <li>Self-hosted variable font — no Google Fonts request, no third-party cookie surface</li>
+                        <li>Self-hosted variable font, so no Google Fonts request and no third-party cookie surface</li>
                         <li>No component or icon library: every icon is an inline SVG, every component local JSX</li>
                     </ul>
 
@@ -1622,7 +1624,7 @@
 
                     <h3 class="project-title">ACPV CANN</h3>
                     <p class="project-summary">Trade site for ACPV DOO, a licensed medical cannabis producer supplying European distributors from Beloviste, Gostivar.</p>
-                    <p class="project-body">A business-to-business site aimed at a regulated audience, so the whole thing is organised around proof: certificates of analysis, ISO 9001 and ISO 14001 documents, GACP certification and the API authorisation are all downloadable straight from the pages that reference them. Six static pages, no framework and no build step — the only server-side code is one Vercel function that delivers the trade-enquiry form over SMTP.</p>
+                    <p class="project-body">A business-to-business site aimed at a regulated audience, so the whole thing is organised around proof: certificates of analysis, ISO 9001 and ISO 14001 documents, GACP certification and the API authorisation are all downloadable straight from the pages that reference them. Six static pages, no framework and no build step. The only server-side code is one Vercel function that delivers the trade-enquiry form over SMTP.</p>
 
                     <ul class="project-points">
                         <li>Serverless contact endpoint written provider-agnostically: SMTP host, mailbox and recipient all come from environment variables</li>
@@ -1664,15 +1666,15 @@
 
                     <h3 class="project-title">Durmisi&Clean</h3>
                     <p class="project-summary">Bilingual German/English site for a family-run cleaning company in Rafz, Switzerland.</p>
-                    <p class="project-body">Six static pages covering services, about, contact and a Swiss-law Impressum — plain HTML, CSS and JavaScript with no dependencies and no backend. The German text is written literally into the HTML rather than injected at runtime, so the page is correct and indexable with JavaScript switched off; the English translation swaps in from a single strings file. Contact details live in one object at the top of that file, so the owner changes their phone number once and it updates the header, footer, contact page, Impressum, mobile call bar and the form recipient.</p>
+                    <p class="project-body">Six static pages covering services, about, contact and a Swiss-law Impressum, in plain HTML, CSS and JavaScript with no dependencies and no backend. The German text is written literally into the HTML rather than injected at runtime, so the page is correct and indexable with JavaScript switched off; the English translation swaps in from a single strings file. Contact details live in one object at the top of that file, so the owner changes their phone number once and it updates the header, footer, contact page, Impressum, mobile call bar and the form recipient.</p>
 
                     <ul class="project-points">
                         <li>Language toggle persists in <code>localStorage</code> and applies before first paint, so an English visitor never sees a flash of German</li>
-                        <li>Attributes translate too — placeholders, alt text, <code>&lt;title&gt;</code> and the meta description</li>
+                        <li>Attributes translate too: placeholders, alt text, <code>&lt;title&gt;</code> and the meta description</li>
                         <li>Any contact value left as a <code>[PLACEHOLDER]</code> is detected at runtime and its icon dropped, so the site can never ship a dead link</li>
                         <li>Contact form validates in the active language, then hands off to the visitor’s mail client with a structured message</li>
                         <li>Keyboard accessible throughout: skip link, focus trap in the mobile menu, Esc to close, visible focus rings, WCAG AA contrast</li>
-                        <li>No cookies, no analytics, no third-party requests — everything served from one folder</li>
+                        <li>No cookies, no analytics and no third-party requests; everything is served from one folder</li>
                     </ul>
 
                     <div class="tech-chips">
@@ -1705,7 +1707,7 @@
 
                     <h3 class="project-title">DGDsmart</h3>
                     <p class="project-summary">Single-page site for my own computer store and electronics repair service in Gostivar.</p>
-                    <p class="project-body">DGDsmart sells hardware and repairs electronics, so the site serves two audiences at once and the design system splits them by colour — blue and cyan for the store, amber for the workshop. Plain HTML, CSS and JavaScript, no build step. Everything derives from CSS variables in <code>:root</code>, so changing one value restyles the whole site.</p>
+                    <p class="project-body">DGDsmart sells hardware and repairs electronics, so the site serves two audiences at once and the design system splits them by colour: blue and cyan for the store, amber for the workshop. Plain HTML, CSS and JavaScript, no build step. Everything derives from CSS variables in <code>:root</code>, so changing one value restyles the whole site.</p>
 
                     <ul class="project-points">
                         <li><code>LocalBusiness</code> structured data in the head so the shop surfaces correctly in search and maps</li>
@@ -1745,10 +1747,10 @@
                     <p class="project-body">Rather than pulling in an auth library, every step is implemented and therefore visible: registration with strength rules, bcrypt password hashing, one-time codes by email, server-side sessions, permission checks per resource, and a working certificate authority. An Express API backs a React 19 client; user records are kept in a local JSON file because the point of the exercise is the security model, not the database.</p>
 
                     <ul class="project-points">
-                        <li>Email two-factor authentication — a one-time code issued on login and delivered through Nodemailer</li>
+                        <li>Email two-factor authentication: a one-time code issued on login and delivered through Nodemailer</li>
                         <li>Role-based access control with three roles mapped to explicit permission sets, checked per resource</li>
                         <li>Just-in-time privilege elevation: temporary access granted for a chosen duration and revocable on demand</li>
-                        <li>X.509 certificate hierarchy generated with node-forge — a root CA that signs downloadable child certificates</li>
+                        <li>X.509 certificate hierarchy generated with node-forge, with a root CA that signs downloadable child certificates</li>
                         <li>HTTPS server that runs against the certificates it just generated</li>
                         <li>Admin panel for inspecting users and reassigning roles at runtime</li>
                     </ul>
@@ -1780,10 +1782,10 @@
 
                     <h3 class="project-title">GetServio</h3>
                     <p class="project-summary">Cross-platform marketplace app for home and repair services, built for iOS and Android.</p>
-                    <p class="project-body">A customer photographs a problem at home, submits the request, and gets offers back from specialised local firms — so the comparison happens in one place instead of across half a dozen phone calls. I work on it as a contributing developer.</p>
+                    <p class="project-body">A customer photographs a problem at home, submits the request, and gets offers back from specialised local firms, so the comparison happens in one place instead of over half a dozen phone calls. I work on it as a contributing developer.</p>
 
                     <ul class="project-points">
-                        <li>Request flow starts from a photo of the actual problem rather than a form the customer has to describe it in</li>
+                        <li>Requests start with a photo of the problem and a few details</li>
                         <li>Offers come back from specialised local firms, side by side</li>
                         <li>Multi-language interface</li>
                         <li>Shipped for both iOS and Android</li>
@@ -1812,12 +1814,12 @@
 
                     <h3 class="project-title">Personal Portfolio</h3>
                     <p class="project-summary">The site you are reading right now.</p>
-                    <p class="project-body">One HTML file. No framework, no build step, no dependencies beyond a webfont — the whole portfolio is a single document with its styles and behaviour inline, which means it deploys as a static file and there is nothing to break. Each project in the section above is a plain <code>&lt;article&gt;</code> in the markup, and the filter bar builds itself from the categories those articles declare.</p>
+                    <p class="project-body">One HTML file. No framework, no build step, no dependencies beyond a webfont. Styles and behaviour live inline, so it deploys as a static file with nothing to break. Each project in the section above is a plain <code>&lt;article&gt;</code> in the markup, and the filter bar builds itself from the categories those articles declare.</p>
 
                     <ul class="project-points">
-                        <li>Dark interface built on CSS custom properties, with a static ambient gradient — no looping background motion to read over</li>
-                        <li>Scroll-driven reveal animations via <code>IntersectionObserver</code>, fully disabled under <code>prefers-reduced-motion</code></li>
-                        <li>Interaction driven by a small spring solver written for the page — interruptible, velocity-aware, no animation library</li>
+                        <li>Dark interface built on CSS custom properties, with a static ambient gradient</li>
+                        <li>Scroll-driven reveal animations via <code>IntersectionObserver</code>, disabled under <code>prefers-reduced-motion</code></li>
+                        <li>Interaction driven by a small spring solver written for the page: interruptible, velocity-aware, no animation library</li>
                         <li>Person structured data, Open Graph and Twitter cards for link previews</li>
                     </ul>
 
@@ -1847,8 +1849,7 @@
                 <p class="section-label">Skills</p>
                 <h2 class="section-title">What I work with</h2>
                 <p class="section-desc">
-                    Everything here comes out of work I have actually shipped, built or run in
-                    production — nothing on this list is theoretical.
+                    Everything here comes out of work I have shipped, built or run in production.
                 </p>
             </div>
 
@@ -1983,8 +1984,9 @@
                     <p class="timeline-org">Independent — clients in North Macedonia and Switzerland</p>
                     <p class="timeline-desc">Design, build and deploy marketing and booking sites for small businesses:
                         a dental clinic, a cleaning company, a licensed cannabis producer and a computer store. I handle
-                        the whole thing end to end — content structure, design, code, SEO, deployment on Vercel and
-                        custom domains — and hand over documentation so the owner can update their own details.</p>
+                        the whole thing end to end: content structure, design, code, SEO, deployment on Vercel and
+                        custom domains. Each site ships with documentation so the owner can update their own
+                        details.</p>
                     <div class="timeline-tags">
                         <span class="timeline-tag">Client work</span>
                         <span class="timeline-tag">Full delivery</span>
@@ -1995,7 +1997,7 @@
                     <p class="timeline-date">August 2023 — Present</p>
                     <h3 class="timeline-title">CEO &amp; Sales Manager</h3>
                     <p class="timeline-org">DGD Smart</p>
-                    <p class="timeline-desc">Running the business end to end alongside full-time studies — sales,
+                    <p class="timeline-desc">Running the business end to end alongside full-time studies: sales,
                         supplier relationships, pricing, customer service and overall finances. I also do the hardware
                         side myself: diagnostics, repair and servicing of computers and consumer electronics. Branding,
                         promotional material and store visuals are designed in house, as is the shop's web presence.</p>
@@ -2010,7 +2012,7 @@
                 <div class="timeline-item">
                     <p class="timeline-date">2021 — Present</p>
                     <h3 class="timeline-title">Volunteer, Activist and Debater</h3>
-                    <p class="timeline-org">Student forums, Skopje — and my local community in Gostivar</p>
+                    <p class="timeline-org">Student forums in Skopje, and my local community in Gostivar</p>
                     <p class="timeline-desc">Active in student forums and in local youth activities: organising them and
                         taking part in them. Experienced debater and public speaker.</p>
                     <div class="timeline-tags">
@@ -2024,7 +2026,7 @@
                     <h3 class="timeline-title">Team Leader — five Erasmus+ projects</h3>
                     <p class="timeline-org">European Commission Erasmus+ programme</p>
                     <p class="timeline-desc">Youth exchanges in Poland, Germany and Struga, and training courses in Spain
-                        and Belgium. I led the national team in every one of them — preparation, group facilitation,
+                        and Belgium. I led the national team in every one of them: preparation, group facilitation,
                         coordination with the partner organisations, and reporting afterwards.</p>
                     <div class="timeline-tags">
                         <span class="timeline-tag">Leadership</span>
@@ -2043,7 +2045,7 @@
                 <p class="section-label">Education</p>
                 <h2 class="section-title">Academic journey</h2>
                 <p class="section-desc">
-                    A Computer Engineering degree on top of a Matura thesis in cybersecurity — and a
+                    A Computer Engineering degree on top of a Matura thesis in cybersecurity, plus a
                     peer-training certification picked up along the way.
                 </p>
             </div>
@@ -2181,7 +2183,7 @@
         <footer>
             <p>
                 © <span id="year">2026</span> <span class="footer-name">Donik Goxha</span>. All rights reserved.<br>
-                Built from scratch — no framework, no build step. <a
+                Built from scratch. No framework, no build step. <a
                     href="https://github.com/donikgoxha/Personal-Website" target="_blank" rel="noopener noreferrer">Source
                 on GitHub</a>.
             </p>
@@ -2191,17 +2193,9 @@
 
 <script>
 
-    /* =====================================================================
-       MOTION
-       ---------------------------------------------------------------------
-       One spring implementation drives everything a finger can touch. A
-       spring is used rather than a CSS transition because it can be
-       re-targeted mid-flight: it carries its current value and velocity into
-       the new animation, so an interaction that reverses never jumps or hits
-       a wall. Parameters follow Apple's two: response (how quickly it
-       reaches the target, in seconds) and damping (1 = no overshoot, below 1
-       = bounce). Bounce is reserved for motion a gesture actually threw.
-       ===================================================================== */
+    /* ===== SPRING =====
+       Interruptible spring, re-targetable mid-flight. response = seconds to
+       target, damping = 1 for no overshoot, below 1 to bounce. */
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -2219,9 +2213,7 @@
             const gap = now - last;
             last = now;
 
-            /* A frame gap this long means the page was not being rendered at
-               all (a background tab, a sleeping display). Animating out of it
-               would crawl, so the value lands and the motion is over. */
+            /* Page was not rendering (background tab, sleeping display) — land it */
             if (gap > 300) {
                 value = target;
                 velocity = 0;
@@ -2233,8 +2225,7 @@
             const dt = Math.min(gap / 1000, 1 / 30);
 
             const omega = (2 * Math.PI) / response;
-            /* Fixed sub-steps keep the integration stable regardless of the
-               display's refresh rate. */
+            /* Fixed sub-steps so the result does not depend on refresh rate */
             const steps = Math.max(1, Math.ceil(dt / (1 / 240)));
             const h = dt / steps;
 
@@ -2257,8 +2248,7 @@
         }
 
         return {
-            /* Re-targeting never resets the value: the new motion starts from
-               whatever is on screen right now, at its current velocity. */
+            /* Keeps the current value and velocity */
             set: function (next, opts) {
                 opts = opts || {};
                 if (opts.response !== undefined) response = opts.response;
@@ -2285,11 +2275,7 @@
         };
     }
 
-    /* ===== PRESS FEEDBACK =====
-       Feedback belongs on pointer-down, not on release: waiting for the click
-       to land is the difference between an interface that answers and one
-       that lags. The release spring is slightly under-damped because the
-       finger lifting is itself a small physical event. */
+    /* ===== PRESS FEEDBACK (on pointer-down, not click) ===== */
     function addPress(el, depth) {
         const scale = depth === undefined ? 0.97 : depth;
         const spring = Spring({
@@ -2326,11 +2312,8 @@
         });
 
     /* ===== SLIDING INDICATOR =====
-       A single element that springs from one target to the next, so the
-       selection moves continuously instead of blinking between two states.
-       X, Y and width each get their own spring — a single spring over a
-       2D distance desynchronises as soon as the axes move at different
-       speeds. */
+       One element sprung between targets. X, Y and width get separate
+       springs; one spring over a 2D distance desyncs. */
     function Indicator(container, className) {
         const el = document.createElement('span');
         el.className = className;
@@ -2380,14 +2363,13 @@
     }
 
     /* ===== PROJECT FILTERS =====
-       The cards are written by hand in the HTML above. The filter bar is built
-       from whatever data-cats ids those cards carry, so adding a project — or a
-       whole new category — needs no changes in here. */
+       Built from the data-cats ids on the hand-written cards above, so new
+       projects and new categories need no change here. */
     const grid = document.getElementById('projectsGrid');
     const filterBar = document.getElementById('filterBar');
     const cards = Array.prototype.slice.call(grid.querySelectorAll('.project-card'));
 
-    /* Optional display names. An id with no entry here is capitalised as-is. */
+    /* Display names; an id with no entry is capitalised as-is */
     const CATEGORY_LABELS = {
         client: 'Client work',
         fullstack: 'Full-stack',
@@ -2436,9 +2418,7 @@
     filterInd.moveTo(pills[0], true);
 
     /* ===== GRID BALANCING =====
-       Works out how many columns the grid actually resolved to, walks the
-       visible cards, and widens a lone card left over on the final row so the
-       layout stays even for any number of projects and any filter. */
+       Widens a lone card left over on the final row. */
     function columnCount() {
         const tracks = getComputedStyle(grid).gridTemplateColumns;
         if (!tracks || tracks === 'none') return 1;
@@ -2502,10 +2482,8 @@
         syncFilterIndicator(false);
     });
 
-    /* Showing or hiding cards can add a scrollbar, rewrap the pills or shift
-       the bar by a few pixels. Rather than trust the geometry read at click
-       time, the indicator re-reads its target whenever the bar's own box
-       changes — including when the webfont finally lands. */
+    /* Filtering can add a scrollbar or rewrap the pills, so re-read the
+       geometry whenever the bar's box changes. */
     function syncFilterIndicator(immediate) {
         filterInd.moveTo(filterBar.querySelector('.filter-pill.active'), immediate);
     }
@@ -2548,9 +2526,7 @@
         navInd.moveTo(active, immediate);
     }
 
-    /* ===== MOBILE MENU =====
-       Scales out of the button that opened it and returns the same way, so
-       the panel keeps its spatial relationship to its trigger. */
+    /* ===== MOBILE MENU (scales out of its trigger, and back into it) ===== */
     const menuSpring = Spring({
         value: 0,
         response: 0.3,
@@ -2596,10 +2572,7 @@
         syncNavIndicator(true);
     });
 
-    /* ===== SCROLL STATE =====
-       Read in the scroll listener, written on the next frame, and only ever
-       to transform and opacity — the two properties the compositor can move
-       without touching layout. */
+    /* ===== SCROLL STATE — read on scroll, write transform/opacity next frame ===== */
     let scrollQueued = false;
 
     function onScrollFrame() {
@@ -2672,9 +2645,7 @@
         });
     });
 
-    /* ===== RESIZE =====
-       Geometry is re-measured and snapped rather than animated: a resize is
-       the window moving, not the user moving an element. */
+    /* ===== RESIZE — re-measure and snap, no animation ===== */
     let resizeTimer;
     window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
@@ -2684,6 +2655,39 @@
             syncNavIndicator(true);
         }, 120);
     });
+
+    /* ===== PUBLIC REPO COUNT (falls back to the number in the markup) ===== */
+    const repoStat = document.getElementById('statRepos');
+
+    function cached(key) {
+        try {
+            return sessionStorage.getItem(key);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    if (repoStat) {
+        const stored = cached('repoCount');
+        if (stored) {
+            repoStat.textContent = stored;
+        } else {
+            fetch('https://api.github.com/users/donikgoxha')
+                .then(function (res) {
+                    return res.ok ? res.json() : null;
+                })
+                .then(function (data) {
+                    if (!data || typeof data.public_repos !== 'number') return;
+                    repoStat.textContent = data.public_repos;
+                    try {
+                        sessionStorage.setItem('repoCount', data.public_repos);
+                    } catch (e) {
+                    }
+                })
+                .catch(function () {
+                });
+        }
+    }
 
     /* ===== FOOTER YEAR ===== */
     document.getElementById('year').textContent = new Date().getFullYear();
